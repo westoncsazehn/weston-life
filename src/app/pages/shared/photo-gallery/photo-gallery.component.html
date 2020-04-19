@@ -1,0 +1,34 @@
+<div class="container-fluid p-0">
+  <div class="row m-0 photo-gallery">
+    <div
+      class="col-sm-2 photo"
+      *ngFor="let photo of photos"
+      [ngStyle]="getPhotoStyles(photo)"
+      (click)="viewImage(photo, viewImageModal)"
+    ></div>
+  </div>
+</div>
+
+<ng-template #viewImageModal>
+  <div class="modal-body">
+    <div class="photo-navigation">
+      <span
+        class="photo-navigate-direction"
+        id="photo-navigate-left"
+        *ngIf="currentPhotoIndex > 0"
+        (click)="navigateToImage()"
+      >
+        <fa-icon [icon]="faChevronLeft"></fa-icon>
+      </span>
+      <span
+        class="photo-navigate-direction"
+        id="photo-navigate-right"
+        *ngIf="currentPhotoIndex < photos?.length - 1"
+        (click)="navigateToImage(true)"
+      >
+        <fa-icon [icon]="faChevronRight"></fa-icon>
+      </span>
+    </div>
+    <img [src]="selectedPhotoUrl" class="img-fluid" />
+  </div>
+</ng-template>

@@ -1,0 +1,78 @@
+<form class="contact-form" #contactForm="ngForm" *ngIf="!isContactSubmitted">
+  <div class="form-group">
+    <label for="name"> <span class="required">*</span>Name: </label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      #name="ngModel"
+      required
+      [(ngModel)]="contactFormModel.name"
+    />
+    <div
+      class="error alert alert-danger"
+      [hidden]="name.pristine || !name?.errors?.required"
+    >
+      Name is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email"> <span class="required">*</span>Email: </label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      #email="ngModel"
+      required
+      email
+      [(ngModel)]="contactFormModel.email"
+    />
+    <div
+      class="error alert alert-danger"
+      [hidden]="email.pristine || email.valid || email?.errors?.required"
+    >
+      Email format is not valid.
+    </div>
+    <div
+      class="error alert alert-danger"
+      [hidden]="email.pristine || !email?.errors?.required"
+    >
+      Email is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="message"> <span class="required">*</span>Message: </label>
+    <textarea
+      type="text"
+      class="form-control"
+      id="message"
+      name="message"
+      #message="ngModel"
+      rows="6"
+      required
+      [(ngModel)]="contactFormModel.message"
+    ></textarea>
+    <div
+      class="error alert alert-danger"
+      [hidden]="message.pristine || !message?.errors?.required"
+    >
+      Message is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <button
+      class="btn btn-primary"
+      (click)="submitContactForm()"
+      [disabled]="contactForm.invalid"
+    >
+      SUBMIT
+    </button>
+  </div>
+</form>
+<div class="thank-you-message" *ngIf="isContactSubmitted">
+  <p class="m-0">
+    Message Sent!
+  </p>
+</div>

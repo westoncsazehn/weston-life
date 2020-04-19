@@ -1,0 +1,20 @@
+<div class="container navigation" [ngClass]="{ 'home-navigation': isHome }">
+  <div class="row">
+    <div class="col-sm-4 nav-title">
+      <a routerLink="/" *ngIf="!isHome">
+        weston
+        <fa-icon [icon]="faBolt"></fa-icon>
+        sazehn
+      </a>
+    </div>
+    <div class="col-sm-8">
+      <ul>
+        <li *ngFor="let link of links">
+          <a *ngIf="isValidLink(link.path)" [href]="link.path">
+            {{ link.path }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

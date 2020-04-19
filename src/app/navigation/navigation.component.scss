@@ -1,0 +1,41 @@
+.navigation {
+  padding: 1rem 0;
+  &.home-navigation {
+    ul li a {
+      color: white !important;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      padding: 1rem;
+      &:hover {
+        color: #ff5349 !important;
+        text-decoration: none;
+      }
+    }
+  }
+  .nav-title a {
+    font-weight: bold;
+    vertical-align: middle;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    fa-icon {
+      color: #ff5349;
+    }
+  }
+  ul {
+    text-align: right;
+    margin: unset;
+    li {
+      display: inline-block;
+      a {
+        color: #444444;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        padding: 1rem;
+        &:hover {
+          color: #ff5349;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

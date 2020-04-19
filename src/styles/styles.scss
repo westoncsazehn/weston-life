@@ -1,0 +1,84 @@
+@import "src/styles/variables";
+
+.modal-dialog {
+  max-width: unset;
+  width: fit-content;
+  height: 90vh;
+  // overflow-y: hidden;
+  .modal-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    .modal-body {
+      padding: 0;
+      .photo-navigation {
+        position: fixed;
+        top: 45%;
+        height: 100px;
+        .photo-navigate-direction {
+          position: fixed;
+          background: transparent;
+          border: none;
+          color: $white;
+          font-size: 3.5rem;
+          opacity: 0.5;
+          font-weight: 100;
+          text-shadow: none;
+          line-height: 0.3;
+          display: inline-block;
+          &:hover {
+            opacity: 1;
+            cursor: pointer;
+          }
+          &:active,
+          &:focus,
+          &:visited {
+            outline: unset !important;
+          }
+        }
+        #photo-navigate-left {
+          left: -20%;
+        }
+        #photo-navigate-right {
+          right: -20%;
+        }
+      }
+      .photo-navigate-right {
+        float: right;
+      }
+    }
+  }
+}
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+body {
+  font-family: Arial, sans-sarif;
+  color: #333;
+  overflow: hidden;
+  h2 {
+    margin: 0 auto;
+  }
+}
+navigation {
+  a {
+    color: #444444;
+    &:hover {
+      color: #ff5349;
+      text-decoration: none;
+    }
+  }
+}
+
+.alert-danger {
+  color: $red;
+}
+
+.progress-bar {
+  background-color: $green;
+  i {
+    font-weight: bold;
+    color: $white;
+  }
+}

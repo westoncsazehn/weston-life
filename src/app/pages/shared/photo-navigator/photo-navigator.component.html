@@ -1,0 +1,33 @@
+<div class="photo-navigator row">
+  <div class="col-sm-2">
+    <button
+      class="photo-nav-direction photo-nav-left p-0"
+      *ngIf="activeIndex > 0"
+      (click)="navigateToCategory()"
+    >
+      <fa-icon [icon]="faChevronLeft"></fa-icon>
+    </button>
+  </div>
+  <div class="col-sm-8">
+    <h1>{{ getActiveCategoryTitle() }}</h1>
+    <ul [ngStyle]="getNavigatorListStyle()">
+      <li *ngFor="let category of navCategories">
+        <div
+          class="category-nav"
+          [ngClass]="{ active: category.active }"
+          [ngStyle]="getPhotoStyles(category)"
+          (click)="viewCategory(category)"
+        ></div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-2 p-0">
+    <button
+      class="photo-nav-direction photo-nav-right"
+      *ngIf="activeIndex < navCategories.length - 1"
+      (click)="navigateToCategory(true)"
+    >
+      <fa-icon [icon]="faChevronRight"></fa-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<navigation></navigation>
+<photo-header [headerImage]="getActiveHeaderImage()">
+  <photo-navigator
+    class="navigator"
+    [activeCategory]="activeCategory"
+    [navCategories]="locations"
+    (viewNewCategory)="viewCategory($event)"
+  ></photo-navigator>
+</photo-header>
+<photo-gallery [photos]="photos"></photo-gallery>

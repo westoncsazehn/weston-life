@@ -1,0 +1,113 @@
+/*
+Theme Name: Weston's Life
+Text Domain: westonlife
+Version: 1.0
+Description: Custom theme created for Weston's Life
+Author: Weston Sazehn
+Author URI: https://westons.life
+*/
+
+/* BASE */
+html {
+  margin: 0 !important;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: darkslategray;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: inherit;
+  padding-top: 4rem;
+  text-align: left;
+}
+p {
+  font-size: 1.25rem;
+  font-family: inherit;
+  color: inherit;
+  font-weight: 300;
+  line-height: 1.68;
+  text-indent: 2rem;
+}
+
+p.date {
+  font-size: 1rem;
+  text-indent: unset;
+}
+
+.posts-list .card {
+  margin-top: 35px;
+  border-radius: 0px;
+  max-height: 350px;
+  overflow-y: hidden;
+}
+.posts-list .card:hover {
+  border-color: black;
+}
+
+.posts-list .card .card-title {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: darkslategray;
+  font-weight: 500;
+}
+.posts-list .card .card-title:hover {
+  color: darkslategray;
+}
+
+.posts-list .card .card-body p {
+  font-size: 1rem;
+  text-indent: unset;
+}
+.posts-list .card .card-body p.date {
+  font-size: 0.75rem;
+}
+
+.posts-list .card-image-wrapper .card-img-top {
+  max-height: 200px;
+}
+.posts-list .card-image-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: black;
+}
+
+.posts-list .card-image-wrapper:hover .overlay {
+  opacity: 0.7;
+}
+
+.posts-list .card-image-wrapper .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.post-image-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.post-image-wrapper .post-image {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.menu-main-menu-container {
+  margin: 0 auto;
+}

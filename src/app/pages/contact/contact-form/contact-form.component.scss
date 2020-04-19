@@ -1,0 +1,55 @@
+@import "src/styles/variables";
+
+.contact-form {
+  color: white;
+  padding: 3rem 3rem 4rem 3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  label {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: 100;
+    .required {
+      color: $red;
+    }
+  }
+  input,
+  textarea {
+    border-radius: 0;
+    border: none;
+  }
+  .error {
+    border-radius: 0px;
+  }
+  button {
+    position: relative;
+    float: right;
+    border-radius: 0;
+    background-color: $red;
+    opacity: 0.9;
+    border: none;
+    &:active,
+    &:disabled,
+    &:focus,
+    &:hover {
+      border: none;
+      box-shadow: none;
+      outline: none;
+    }
+    &:disabled {
+      background-color: gray;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.thank-you-message {
+  color: white;
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 1.75rem;
+  text-align: center;
+  top: 30%;
+  transform: translateY(-50%);
+  position: relative;
+}

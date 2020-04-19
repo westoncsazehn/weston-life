@@ -1,0 +1,6 @@
+<div class="container-fluid p-0">
+  <h1 *ngIf="title?.length">{{ title }}</h1>
+  <div class="header" [ngStyle]="getPhotoStyles()">
+    <ng-content select=".navigator"></ng-content>
+  </div>
+</div>
