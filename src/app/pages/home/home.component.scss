@@ -8,7 +8,8 @@
   }
   #introduction {
     position: relative;
-    top: 17%;
+    top: 40%;
+    transform: translateY(-50%);
     color: white;
     p {
       text-indent: 2rem;
@@ -18,7 +19,7 @@
     }
     h1 {
       font-weight: bold;
-      font-size: 3.5rem;
+      font-size: 3rem;
       padding: 0 0 1rem 0;
       fa-icon {
         color: #ff5349;
@@ -28,5 +29,152 @@
   .black-transparent {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5rem;
+    width: 27%;
+    left: 16%;
+    position: relative;
+  }
+}
+@media (max-width: 576px) {
+  :host {
+    #introduction {
+      top: 45%;
+      transform: translateY(-50%);
+      .black-transparent {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1.75rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        left: unset;
+        position: relative;
+        h1 {
+          font-size: 2.25rem;
+          text-align: center;
+        }
+        p {
+          text-indent: 2rem;
+          font-size: 1.1rem;
+          line-height: 2rem;
+          margin: unset !important;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  :host {
+    #introduction {
+      top: 40%;
+      transform: translateY(-50%);
+      .black-transparent {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1.75rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 60%;
+        left: 35%;
+        position: relative;
+        h1 {
+          font-size: 2rem;
+          text-align: left;
+          margin: unset;
+        }
+        p {
+          text-indent: 2rem;
+          font-size: 1.1rem;
+          line-height: 2rem;
+          margin: unset !important;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  :host {
+    #introduction {
+      top: 40%;
+      transform: translateY(-50%);
+      .black-transparent {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 64%;
+        left: 25%;
+        position: relative;
+        h1 {
+          font-size: 2.25rem;
+          text-align: left;
+          padding: 0 0 0.5rem 0;
+        }
+        p {
+          text-indent: 2rem;
+          font-size: 1.1rem;
+          line-height: 2rem;
+          margin: unset !important;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  :host {
+    #introduction {
+      top: 40%;
+      transform: translateY(-50%);
+      .black-transparent {
+        padding: 3rem;
+        width: 55%;
+        left: 27%;
+        position: relative;
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1201px) and (max-width: 1600px) {
+  :host {
+    #introduction {
+      top: 44%;
+      transform: translateY(-50%);
+      .black-transparent {
+        padding: 3.5rem;
+        width: 42%;
+        left: 21%;
+        position: relative;
+        h1 {
+          font-size: 2.75rem;
+        }
+        p {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 2200px) {
+  :host {
+    #introduction {
+      top: 44%;
+      transform: translateY(-50%);
+      .black-transparent {
+        padding: 3.5rem;
+        width: 31%;
+        left: 18%;
+        position: relative;
+        h1 {
+          font-size: 2.75rem;
+        }
+        p {
+          font-size: 1.25rem;
+        }
+      }
+    }
   }
 }

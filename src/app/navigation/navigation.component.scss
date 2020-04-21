@@ -1,41 +1,89 @@
-.navigation {
+.navigation:not(.mobile-navigation) {
   padding: 1rem 0;
-  &.home-navigation {
-    ul li a {
-      color: white !important;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      padding: 1rem;
-      &:hover {
-        color: #ff5349 !important;
+  height: 4rem;
+  .menu-items {
+    position: relative;
+    float: right;
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+    ul {
+      margin: unset;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: unset;
+      li {
+        display: inline-block;
+        color: #444444;
         text-decoration: none;
+        padding: 0 1rem;
+        text-transform: uppercase;
+        a:hover {
+          color: #ff5349 !important;
+        }
       }
     }
   }
-  .nav-title a {
-    font-weight: bold;
-    vertical-align: middle;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    fa-icon {
+}
+.home-navigation {
+  ul li a {
+    color: white;
+  }
+  &.mobile-navigation {
+    .mobile-menu-icon {
+      color: white;
+      padding: unset;
+    }
+    .menu-items {
+      ul li a {
+        color: #444444;
+      }
+    }
+  }
+}
+.mobile-navigation {
+  padding: 1rem 0;
+  height: 4rem;
+  .mobile-menu-icon {
+    padding-right: 1rem;
+    color: #444444;
+    font-size: 2rem;
+    position: relative;
+    float: right;
+    top: -0.5rem;
+    cursor: pointer;
+    &:hover {
       color: #ff5349;
     }
   }
   ul {
+    background-color: white;
+    z-index: 999;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 50px;
     text-align: right;
-    margin: unset;
     li {
-      display: inline-block;
+      display: block;
       a {
-        color: #444444;
-        font-size: 1.1rem;
+        line-height: 50px;
         text-transform: uppercase;
-        padding: 1rem;
-        &:hover {
-          color: #ff5349;
-          text-decoration: none;
-        }
+        font-size: 18px;
       }
     }
+  }
+}
+.nav-title a {
+  font-weight: bold;
+  vertical-align: middle;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  position: relative;
+  float: left;
+  padding-left: 1rem;
+  fa-icon {
+    color: #ff5349;
   }
 }

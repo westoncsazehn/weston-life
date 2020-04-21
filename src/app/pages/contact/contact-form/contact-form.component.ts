@@ -33,7 +33,6 @@ export class ContactFormComponent implements OnInit, OnDestroy {
   }
 
   public submitContactForm(): void {
-    console.log(this.contactFormModel);
     this.contactService
       .submitContactForm(this.contactFormModel)
       .pipe(takeUntil(this.$destroy))

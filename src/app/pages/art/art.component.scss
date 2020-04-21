@@ -1,0 +1,26 @@
+h1.navigator {
+  font-size: 6rem;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  h1.navigator {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  h1.navigator {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  h1.navigator {
+    font-size: 6rem;
+  }
+}

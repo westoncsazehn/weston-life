@@ -8,7 +8,7 @@
       <fa-icon [icon]="faChevronLeft"></fa-icon>
     </button>
   </div>
-  <div class="col-sm-8">
+  <div class="col-sm-8 mobile-nav-wrapper">
     <h1>{{ getActiveCategoryTitle() }}</h1>
     <ul [ngStyle]="getNavigatorListStyle()">
       <li *ngFor="let category of navCategories">
